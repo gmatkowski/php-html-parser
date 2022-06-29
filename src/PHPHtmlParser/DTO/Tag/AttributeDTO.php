@@ -59,7 +59,7 @@ final class AttributeDTO
             return;
         }
         $converter = $encode->convert();
-        $converter->convert($this->value);
+        $converter->fromString($this->value);
         $this->value = $converter->toString();
     }
 }
