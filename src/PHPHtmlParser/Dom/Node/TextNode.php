@@ -115,7 +115,7 @@ class TextNode extends LeafNode
         $this->text = $text;
         if (!\is_null($this->encode)) {
             $converter = $this->encode->convert();
-            $converter->convert($text);
+            $converter->fromString($text);
 
             // remember the conversion
             $this->convertedText = $converter->toString();
